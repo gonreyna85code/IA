@@ -1,0 +1,11 @@
+{
+  "name": "ia",
+  "version": "1.0.0",
+  "description": "inteligencia artificial",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Gonzalo Reyna",
+  "license": "ISC"
+}
