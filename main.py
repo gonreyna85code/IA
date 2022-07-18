@@ -20,8 +20,9 @@ def take_user_input():
     try:
         print('Recognizing...')
         query = r.recognize_google(audio, language='es-US')
+        print(f'User said: {query}\n')
         if not 'desactivar' in query or 'terminar' in query:
-            if BOTNAME in query:
+            if BOTNAME in query or "la mía" in query:
                 speak(choice(opening_text))
         else:
             hour = datetime.now().hour
@@ -67,7 +68,7 @@ if __name__ == '__main__':
         # query lower case and remove punctuation
         query = take_user_input().lower()
         # activate only on key name
-        if BOTNAME in query:
+        if BOTNAME in query or "la mía" in query:
             if 'desactivar' in query or 'terminar' in query:
                 speak(choice(opening_text))
                 exit()
