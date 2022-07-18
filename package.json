@@ -2,10 +2,18 @@
   "name": "ia",
   "version": "1.0.0",
   "description": "inteligencia artificial",
-  "main": "index.js",
+  "main": "index.cjs",
+  "type": "module",
   "scripts": {
-    "test": "test"
+    "test": "python -m test",
+    "start": "nodemon index.mjs"
   },
   "author": "Gonzalo Reyna",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {    
+    "node-fetch": "^3.2.8",
+    "prompt": "^1.3.0",
+    "nodemon": "2.0.19",
+    "dotenv": "^8.2.0"
+  }
 }
